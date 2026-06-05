@@ -246,7 +246,7 @@ button {
 }
 
 .hero-media {
-  background-image: url("assets/images/hero-podologia-clinica.jpg");
+  background-image: url("assets/hero-podologia-clinica.jpg");
   background-size: cover;
   background-position: center right;
   transform: scale(1.02);
@@ -577,7 +577,7 @@ button {
   color: #fff;
   background:
     linear-gradient(135deg, rgba(24, 48, 50, 0.96), rgba(7, 95, 93, 0.96)),
-    url("assets/images/hero-podologia-clinica.jpg") center / cover fixed;
+    url("assets/hero-podologia-clinica.jpg") center / cover fixed;
 }
 
 .process-grid {

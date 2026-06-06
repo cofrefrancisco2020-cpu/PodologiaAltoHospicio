@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "NUMERO_WHATSAPP_AQUI";
+const WHATSAPP_NUMBER = "56994743844";
 
 const buildWhatsappUrl = (message) => {
   const cleanedNumber = WHATSAPP_NUMBER.replace(/\D/g, "") || WHATSAPP_NUMBER;

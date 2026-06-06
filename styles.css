@@ -573,6 +573,178 @@ button {
   margin-top: auto;
 }
 
+.cases-section {
+  background: linear-gradient(180deg, #fff, var(--surface-2));
+}
+
+.case-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(320px, 0.84fr);
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(24, 48, 50, 0.08);
+}
+
+.case-image {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.case-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.case-image-wide {
+  aspect-ratio: auto;
+}
+
+.case-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.case-label {
+  margin: 0;
+  color: var(--coral-dark);
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-copy h3,
+.case-card-copy h3 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 2.45rem);
+  line-height: 1.05;
+}
+
+.case-copy p:not(.case-label),
+.case-card-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.case-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: 0 14px 38px rgba(24, 48, 50, 0.07);
+}
+
+.case-card .case-image {
+  aspect-ratio: auto;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.case-card-copy {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.case-badges {
+  position: absolute;
+  inset: 12px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+}
+
+.case-badges span {
+  width: max-content;
+  min-height: 28px;
+  max-width: min(150px, 100%);
+  display: inline-grid;
+  place-items: center;
+  align-self: start;
+  padding: 6px 10px;
+  border: 1px solid rgba(15, 127, 122, 0.2);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 22px rgba(18, 45, 46, 0.13);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.case-badges span:last-child {
+  align-self: end;
+}
+
+.case-badges-horizontal {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.case-badges-stacked {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.case-badges-stacked span:nth-child(2) {
+  align-self: center;
+}
+
+.case-badges-grid {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.case-badges-grid span:nth-child(2),
+.case-badges-grid span:nth-child(4) {
+  justify-self: end;
+}
+
+.case-badges-grid span:nth-child(n + 3) {
+  align-self: end;
+}
+
+.case-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 18px;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 127, 122, 0.16);
+  border-radius: var(--radius);
+  color: var(--muted);
+  background: var(--soft);
+}
+
+.case-note strong {
+  color: var(--teal-dark);
+}
+
 .process-section {
   color: #fff;
   background:
@@ -731,6 +903,15 @@ button {
 
 .contact-panel p {
   margin-block: 16px 28px;
+}
+
+.contact-panel .contact-highlight {
+  padding: 14px 16px;
+  margin-block: 0 22px;
+  border: 1px solid rgba(15, 127, 122, 0.14);
+  border-radius: var(--radius);
+  color: var(--ink);
+  background: var(--soft);
 }
 
 .contact-form {
@@ -950,6 +1131,7 @@ details p {
   .intro-grid,
   .service-layout,
   .split-heading,
+  .case-feature,
   .process-grid,
   .trust-grid,
   .location-grid,
@@ -959,7 +1141,8 @@ details p {
     grid-template-columns: 1fr;
   }
 
-  .treatment-grid {
+  .treatment-grid,
+  .case-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1031,8 +1214,31 @@ details p {
     padding-block: 64px;
   }
 
-  .treatment-grid {
+  .treatment-grid,
+  .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-feature {
+    padding: 14px;
+  }
+
+  .case-image-wide {
+    aspect-ratio: auto;
+  }
+
+  .case-badges {
+    inset: 8px;
+  }
+
+  .case-badges span {
+    min-height: 25px;
+    padding: 5px 8px;
+    font-size: 0.66rem;
+  }
+
+  .case-note {
+    display: block;
   }
 
   .service-card,

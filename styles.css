@@ -729,6 +729,40 @@ button {
   align-self: end;
 }
 
+.case-badges-mosaic {
+  display: block;
+}
+
+.case-badges-mosaic span {
+  position: absolute;
+  align-self: auto;
+}
+
+.case-badges-mosaic span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.case-badges-mosaic span:nth-child(2) {
+  top: calc(33.333% + 4px);
+  left: 0;
+}
+
+.case-badges-mosaic span:nth-child(3) {
+  top: calc(66.666% + 4px);
+  left: 0;
+}
+
+.case-badges-mosaic span:nth-child(4) {
+  top: 0;
+  left: calc(50% + 4px);
+}
+
+.case-badges-mosaic span:nth-child(5) {
+  top: calc(50% + 4px);
+  left: calc(50% + 4px);
+}
+
 .case-note {
   display: flex;
   gap: 10px;
